@@ -1,0 +1,27 @@
+.gift-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    cursor: pointer;
+  }
+  
+  .gift {
+    width: 200px;
+    height: 200px;
+    /* animation: pulse 1.5s infinite; */
+  }
+  
+  /* Efecto de latido (pulse) en el regalo */
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
