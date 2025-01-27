@@ -1,13 +1,20 @@
 /* Aquí puedes agregar estilos básicos para tu aplicación */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    background-color: #fff;
     margin: 0;
     padding: 0;
+    display: flex;
+    height: 100vh;
   }
+div#root{
+  margin: auto;
+}
   
   .App {
     text-align: center;
+    margin: 0 5px;
+  height: 100vh;
   }
   
   .gift-container {
@@ -21,3 +28,51 @@ body {
     height: 150px;
   }
   
+  ul{
+    padding: 0;
+  }
+
+  .couponimg{
+    max-width: 67%;
+    height: auto;
+    margin-left: -50px;
+  }
+
+  .couponbannerimg{
+    height: auto;
+    max-width: 103%;
+    margin-left: -5px;
+    margin-right: -5px;
+  }
+
+.ficha{
+  margin-top: 0 !important;
+}
+
+  .ps-5{
+    padding: 0 5px;
+  }
+
+  .flex{
+    display: flex;
+  }
+  .col{
+    flex-direction: column;
+  }
+  .w-auto{
+    width: auto;
+  }
+  .m-auto{
+    margin: auto;
+  }
+  .ps-5{
+    padding: 0 5px;
+  }
+  .o-hidden{
+    overflow: hidden;
+  }
+  .activar, .volver{
+    width: auto;
+    margin: auto;
+    padding: 10px;
+  }

@@ -1,38 +1,115 @@
 {
+  "2025-01-26": {
+    "text": "Suministro de galletas",
+    "description": "Te traigo un \"cofre\" lleno de galletas",
+    "rules": "Se puede canjear tantas veces como quieras",
+    "unlocked": true,
+    "activated": false,
+    "eternal": true,
+    "image": "/images/gargamelGalletas.jpeg",
+    "id": "2025-01-26"
+  },
+  "2025-01-27": {
+    "text": "Suministro de galletas",
+    "description": "Te traigo un \"cofre\" lleno de galletas",
+    "rules": "Se puede canjear tantas veces como quieras",
+    "unlocked": false,
+    "activated": false,
+    "eternal": true,
+    "image": "/images/gargamelGalletas.jpeg",
+    "date": "2025-01-27"
+  },
+  "2025-01-28": {
+    "text": "Un masaje de cervicales o la caja",
+    "description": "A elegir entre una de las dos opciones",
+    "rules": "Se puede canjear una vez",
+    "unlocked": false,
+    "activated": false,
+    "eternal": false,
+    "image": "/images/cupon-prueba.png",
+    "id": "2025-01-28"
+  },
+  "2025-01-29": {
+    "text": "Tarjeta de prueba",
+    "unlocked": false,
+    "activated": false,
+    "image": "/images/cupon-prueba.png"
+  },
+  "2025-01-30": {
+    "text": "Tarjeta de prueba",
+    "unlocked": false,
+    "activated": false,
+    "image": "/images/cupon-prueba.png"
+  },
+  "2025-01-31": {
+    "text": "Tarjeta de prueba",
+    "unlocked": false,
+    "activated": false,
+    "image": "/images/cupon-prueba.png"
+  },
+  "2025-02-01": {
+    "text": "Tarjeta de prueba",
+    "unlocked": false,
+    "activated": false,
+    "image": "/images/cupon-prueba.png"
+  },
+  "2025-02-02": {
+    "text": "Tarjeta de prueba",
+    "unlocked": false,
+    "activated": false,
+    "image": "/images/cupon-prueba.png"
+  },
   "2024-12-30": {
     "text": "Tarjeta de prueba",
-    "unlocked": true
+    "unlocked": false,
+    "activated": false,
+    "image": "/images/cupon-prueba.png"
   },
   "2024-12-31": {
     "text": "Tarjeta de prueba 2",
-    "unlocked": false
+    "unlocked": false,
+    "activated": false,
+    "image": "/images/cupon-prueba.png"
   },
-  "2025-1-6": {
+  "2025-01-01": {
+    "text": "Cupon de prueba",
+    "unlocked": false,
+    "activated": false,
+    "image": "/images/cupon-prueba.png"
+  },
+  "2025-01-06": {
     "text": "Tarjeta de regalo Inditex",
-    "unlocked": false
+    "unlocked": false,
+    "activated": false
   },
-  "2025-1-7": {
+  "2025-01-07": {
     "text": "Batch cooking de tuppers para 1 semana",
-    "unlocked": false
+    "unlocked": false,
+    "activated": false
   },
-  "2025-1-8": {
+  "2025-01-08": {
     "text": "Masaje de cervicales o lo que hay en esta caja",
-    "unlocked": false
+    "unlocked": false,
+    "activated": false
   },
-  "2025-1-9": {
+  "2025-01-09": {
     "text": "Tarde de juegos con Itziar: gymkana + búsqueda del tesoro en un parque",
-    "unlocked": false
+    "unlocked": false,
+    "activated": false
   },
-  "2025-1-10": {
+  "2025-01-10": {
     "text": "Un mensaje para desearte un buen día antes de ir al trabajo",
-    "unlocked": false
+    "unlocked": false,
+    "activated": false
   },
-  "2025-1-11": {
+  "2025-01-11": {
     "text": "Comodín",
-    "unlocked": false
+    "unlocked": false,
+    "activated": false
   },
-  "2025-1-12": {
+  "2025-01-12": {
     "text": "Sustituir por un comodín tantos cupones como quieras",
-    "unlocked": false
+    "unlocked": false,
+    "activated": false
   }
 }

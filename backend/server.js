@@ -2,7 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const fs = require('fs');
 const path = require('path');
-
+const dayjs = require('dayjs')
 const app = express();
 const PORT = process.env.PORT || 3001;
 
@@ -18,20 +18,26 @@ let coupons = require('./data/coupons.json');
 // Endpoint para obtener el cupón del día
 app.get('/api/coupon', (req, res) => {
     const today = new Date().toISOString().split('T')[0]; // Fecha actual
+    console.log(coupons[today]);
+    console.log(today);
     if (!coupons[today]) {
-        return res.status(404).json({ message: 'No hay cupón para hoy' });
+        return res.json({ message: 'No hay cupón para hoy' });
     }
     res.json({ coupon: coupons[today] });
 });
 
 app.get('/api/unlocked-coupons', (req, res) => {
     const filteredCoupons = Object.values(coupons).filter(coupon => coupon.unlocked);
+    console.log(filteredCoupons.length);
+    if (!filteredCoupons.length){
+        return res.json({ unlockedCoupons: filteredCoupons });
+    }
     res.json({ unlockedCoupons: filteredCoupons });
 });
 
 // Endpoint para desbloquear el cupón (simula persistencia en archivo)
 app.post('/api/unlock', (req, res) => {
-    const today = new Date().toISOString().split('T')[0]; // Fecha actual
+    const today = dayjs().format() // Fecha actual
     coupons[today] = {
         ...coupons[today],
         unlocked: true, //Poner a true para simular desbloqueo
@@ -39,6 +45,43 @@ app.post('/api/unlock', (req, res) => {
     fs.writeFileSync(couponsPath, JSON.stringify(coupons, null, 2));
     res.json({ message: 'Cupón desbloqueado', coupon: coupons[today] });
 });
+
+// app.post('/api/activate-coupon', (req, res) => {
+//     const { date } = req.body;
+    
+//     if (coupons[date]) {
+//         coupons[date].activated = true;
+
+//         // Guardar en el JSON (si lo estás usando como archivo)
+//         fs.writeFileSync('./coupons.json', JSON.stringify(coupons, null, 2));
+
+//         res.json({ message: "Cupón activado con éxito" });
+//     } else {
+//         res.status(404).json({ message: "Cupón no encontrado" });
+//     }
+// });
+
+app.post('/api/activate-coupon', (req, res) => {
+    const { date, password } = req.body;
+    const correctPassword = process.env.COUPON_PASSWORD || "rECURSOSHUMANOS1!"; // Se guarda en variable de entorno
+    console.log("Contraseña ingresada:", password);
+    console.log("Contraseña correcta:", correctPassword);
+    if (password !== correctPassword) {
+        return res.status(403).json({ message: "Contraseña incorrecta" });
+    }
+console.log(coupons[date]);
+    if (!coupons[date]) {
+        return res.status(404).json({ message: "Cupón no encontrado" });
+    }
+    
+
+    // Guardar en el JSON (si lo estás usando como archivo)
+    fs.writeFileSync('./coupons.json', JSON.stringify(coupons, null, 2));
+    coupons[date].activated = true;
+    res.json({ message: "Cupón activado correctamente", coupon: coupons[date] });
+});
+
+
 
 // Servir frontend
 app.get('*', (req, res) => {

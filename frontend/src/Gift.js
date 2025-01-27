@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Gift.css'; // Importa el archivo de estilos
-import initialGiftImage from './gift.gif';  // Imagen del regalo inicial
-import openedGiftImage from './opened-gift.gif';  // Imagen del regalo después de hacer clic
+import initialGiftImage from './images/gift.gif';  // Imagen del regalo inicial
+import openedGiftImage from './images/opened-gift.gif';  // Imagen del regalo después de hacer clic
 
 function Gift({ onClick }) {
     // Estado para gestionar el cambio de GIF

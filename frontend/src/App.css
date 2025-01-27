@@ -19,6 +19,10 @@
     height: 150px;
     /* animation: bounce 1s infinite; */
   }
+
+  ul {
+    list-style-type: none;
+  }
   
   /* Animación de rebote para el regalo */
   @keyframes bounce {
